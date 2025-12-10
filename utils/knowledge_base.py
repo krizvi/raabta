@@ -180,9 +180,9 @@ class BedrockKnowledgeBase:
 
         self._validate_models()
 
-        self.encryption_policy_name = f"bedrock-sample-rag-sp-{self.suffix}"
-        self.network_policy_name = f"bedrock-sample-rag-np-{self.suffix}"
-        self.access_policy_name = f"bedrock-sample-rag-ap-{self.suffix}"
+        self.encryption_policy_name = f"raabta-sp-{self.suffix}"
+        self.network_policy_name = f"raabta-np-{self.suffix}"
+        self.access_policy_name = f"raabta-ap-{self.suffix}"
         self.kb_execution_role_name = (
             f"AmazonBedrockExecutionRoleForKnowledgeBase_{self.suffix}"
         )
@@ -205,8 +205,8 @@ class BedrockKnowledgeBase:
         self.lambda_arn = None
         self.roles = [self.kb_execution_role_name]
 
-        self.vector_store_name = f"bedrock-sample-rag-{self.suffix}"
-        self.index_name = f"bedrock-sample-rag-index-{self.suffix}"
+        self.vector_store_name = f"raabta-{self.suffix}"
+        self.index_name = f"raabta-index-{self.suffix}"
         self.graph_id = None
         self.log_group_name = f"/aws/bedrock/knowledgebase/{self.kb_name}"
 
